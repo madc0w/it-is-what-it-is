@@ -15,10 +15,10 @@ function onLoad() {
 
 function go() {
 	$("#text").animate({
-		"font-size" : "0px",
-		"width" : "0%",
-		"margin-top" : "80px",
-		"opacity" : 0,
+		"font-size": "0px",
+		"width": "0%",
+		"margin-top": "80px",
+		"opacity": 0,
 	}, 2000, "swing", () => {
 		var isPlural = Math.random() < pluralNouns.length / (pluralNouns.length + singularNouns.length);
 		var gender = null;
@@ -49,7 +49,7 @@ function go() {
 		} else if (isPronoun) {
 			text += " " + subject + " ";
 		} else {
-			text += isPlural ? " they " : " it " ;
+			text += isPlural ? " they " : " it ";
 		}
 		text += getRandomElement(verbs);
 		text += ".";
@@ -75,10 +75,10 @@ function go() {
 
 		$("#text").html(text);
 		$("#text").animate({
-			"margin-top" : "0px",
-			"font-size" : "120px",
-			"width" : "100%",
-			"opacity" : 1,
+			"margin-top": "0px",
+			"font-size": "120px",
+			"width": "100%",
+			"opacity": 1,
 		}, 4000);
 	});
 }
@@ -91,8 +91,8 @@ function ucFirst(word) {
 function setRandomVoice(msg) {
 	var voices = [];
 	new SpeechSynthesisUtterance();
-	speechSynthesis.getVoices().forEach(function(voice) {
-		if (voice.lang.startsWith("en") || voice.lang.startsWith("fr")) {
+	speechSynthesis.getVoices().forEach(function (voice) {
+		if (voice.lang.startsWith("en") || voice.lang.startsWith("fr") || voice.lang.startsWith("zh") || voice.lang.startsWith("ja")) {
 			//			console.log("voice", voice);
 			voices.push(voice);
 		}

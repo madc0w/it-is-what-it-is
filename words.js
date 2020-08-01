@@ -164,6 +164,9 @@ singularNouns = [
 	}, {
 		word: "Smurfette",
 		gender: "she"
+	}, {
+		word: "Uncle Iroh",
+		gender: "he"
 	},
 ];
 
