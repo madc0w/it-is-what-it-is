@@ -1,4 +1,5 @@
 pluralNouns = [
+	"sentient beings",
 	"the laws of physics",
 	"intelligent machines",
 	"monsters",
@@ -43,6 +44,11 @@ pluralNouns = [
 	"thoughts",
 	"games",
 	"fishies",
+	"socialists",
+	"social justice",
+	"war",
+	"communists",
+	"capitalists",
 ];
 
 singularNouns = [
@@ -59,6 +65,9 @@ singularNouns = [
 	"being cool",
 	"being smart",
 	"being stupid",
+	"anarcho-capitalism",
+	"socialism",
+	"communism",
 	"beer",
 	"Bitcoin",
 	"everything",
@@ -97,79 +106,78 @@ singularNouns = [
 	"time",
 	"underwear",
 	{
-		word : "the Queen of England",
-		gender : "she"
-	},
-	{
-		word : "the Pope",
-		gender : "he"
-	},
-	{
-		word : "Tree Rex",
-		gender : "he"
-	},
-	{
-		word : "Victor",
-		gender : "he"
-	},
-	{
-		word : "Big Bird",
-		gender : "he"
-	},
-	{
-		word : "God",
-		gender : "He"
-	},
-	{
-		word : "Papa",
-		gender : "he"
-	},
-	{
-		word : "Mama",
-		gender : "she"
-	},
-	{
-		word : "Socrates",
-		gender : "he"
-	},
-	{
-		word : "Plato",
-		gender : "he"
-	},
-	{
-		word : "Albert Einstein",
-		gender : "he"
-	},
-	{
-		word : "Groucho Marx",
-		gender : "he"
-	},
-	{
-		word : "Nikola Tesla",
-		gender : "he"
-	},
-	{
-		word : "Smurfette",
-		gender : "she"
+		word: "the Queen of England",
+		gender: "she"
+	}, {
+		word: "the Queen of England",
+		gender: "she"
+	}, {
+		word: "the Pope",
+		gender: "he"
+	}, {
+		word: "Tree Rex",
+		gender: "he"
+	}, {
+		word: "Victor",
+		gender: "he"
+	}, {
+		word: "Big Bird",
+		gender: "he"
+	}, {
+		word: "God",
+		gender: "He"
+	}, {
+		word: "Papa Smurf",
+		gender: "he"
+	}, {
+		word: "Mama",
+		gender: "she"
+	}, {
+		word: "Socrates",
+		gender: "he"
+	}, {
+		word: "Plato",
+		gender: "he"
+	}, {
+		word: "Albert Einstein",
+		gender: "he"
+	}, {
+		word: "Donald Trump",
+		gender: "he"
+	}, {
+		word: "Milton Friedman",
+		gender: "he"
+	}, {
+		word: "Adam Smith",
+		gender: "he"
+	}, {
+		word: "Ludwig von Mises",
+		gender: "he"
+	}, {
+		word: "Groucho Marx",
+		gender: "he"
+	}, {
+		word: "Nikola Tesla",
+		gender: "he"
+	}, {
+		word: "Smurfette",
+		gender: "she"
 	},
 ];
 
 pronouns = [
 	{
-		word : "we",
-		isPlural : true,
-	},
-	{
-		word : "you",
-		isPlural : true,
-	},
-	{
-		word : "it",
-		isPlural : false,
-	},
-	{
-		word : "one",
-		isPlural : false,
+		word: "we",
+		isPlural: true,
+	}, {
+		word: "you",
+		isPlural: true,
+	}, {
+		word: "it",
+		isPlural: false,
+	}, {
+		word: "one",
+		isPlural: false,
 	},
 ];
 
@@ -189,8 +197,8 @@ singularVerbs = [
 	"still is", "still isn't",
 	"understands", "doesn't understand",
 	"really understands", "doesn't really understand",
-	"means", "does't mean",
-	"really means", "does't really mean",
+	"means", "doesn't mean",
+	"really means", "doesn't really mean",
 	"means to be", "doesn't mean to be",
 	"needs to be", "doesn't need to be",
 	"needs to know", "doesn't need to know",
