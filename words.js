@@ -108,6 +108,9 @@ singularNouns = [
 	"time",
 	"underwear",
 	{
+		word: "Sagoscat",
+		gender: "he"
+	}, {
 		word: "the Queen of England",
 		gender: "she"
 	}, {
@@ -129,6 +132,9 @@ singularNouns = [
 		word: "God",
 		gender: "He"
 	}, {
+		word: "The Devil",
+		gender: "he"
+	}, {
 		word: "Papa Smurf",
 		gender: "he"
 	}, {
@@ -139,6 +145,9 @@ singularNouns = [
 		gender: "he"
 	}, {
 		word: "Plato",
+		gender: "he"
+	}, {
+		word: "Aristotle",
 		gender: "he"
 	}, {
 		word: "Albert Einstein",
