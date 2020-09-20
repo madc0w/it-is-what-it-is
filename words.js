@@ -198,8 +198,8 @@ pronouns = [
 
 singularVerbs = [
 	"is", "was", "will be", "used to be", "has been",
-	"appears to be",
-	"wants to be",
+	"appears to be", "doesn't appear to be",
+	"wants to be", "doesn't want to be",
 	"truly is", "truly was", "truly will be",
 	"isn't", "wasn't", "won't be",
 	"never is", "never was", "will never be", "will never be", "never used to be",
@@ -239,8 +239,8 @@ singularVerbs = [
 
 pluralVerbs = [
 	"are", "were", "will be", "used to be", "have been",
-	"appear to be",
-	"want to be",
+	"appear to be", "don't appear to be",
+	"want to be", "don't want to be",
 	"truly are", "truly were", "truly will be",
 	"aren't", "weren't", "won't be",
 	"never are", "never were", "will never be",
