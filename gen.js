@@ -49,8 +49,8 @@ function go() {
 		if (Math.random() < 0.4) {
 			const endings = isPlural ? pluralEndings : singularEndings;
 			let ending = getRandomElement(endings);
-			if (isPronoun) {
-				ending = ending.replace(/ it /, ' ' + subject + ' ');
+			if (gender || isPronoun) {
+				ending = ending.replace(/ it /, ' ' + (gender || subject) + ' ');
 			}
 			text += " " + ending;
 		} else {

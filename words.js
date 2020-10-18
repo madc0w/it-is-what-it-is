@@ -305,6 +305,13 @@ pluralEndings = [
 	"what you think they are",
 	"what you dream of",
 	"only the best bits",
+	"unnecessary",
+	"necessary",
+	"necessary and sufficient",
+	"superfluous",
+	"totally incomprehensible",
+	"beyond human understanding",
+	"whatever they think of",
 ];
 
 singularEndings = [
@@ -332,4 +339,11 @@ singularEndings = [
 	"what you think it is",
 	"exactly what you think it is",
 	"just what it needs to be",
+	"unnecessary",
+	"necessary",
+	"necessary and sufficient",
+	"superfluous",
+	"totally incomprehensible",
+	"beyond human understanding",
+	"whatever it thinks of",
 ];
