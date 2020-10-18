@@ -1,4 +1,5 @@
 pluralNouns = [
+	"lost socks",
 	"sentient beings",
 	"the laws of physics",
 	"intelligent machines",
@@ -47,9 +48,11 @@ pluralNouns = [
 	"socialists",
 	"communists",
 	"capitalists",
+	"monkeys",
 ];
 
 singularNouns = [
+	"metaphysical nonsense",
 	"your mind",
 	"your brain",
 	"your face",
@@ -65,6 +68,7 @@ singularNouns = [
 	"being cool",
 	"being smart",
 	"being stupid",
+	"capitalism",
 	"anarcho-capitalism",
 	"peace",
 	"tranquility",
@@ -108,6 +112,9 @@ singularNouns = [
 	"time",
 	"underwear",
 	{
+		word: "Elon Musk",
+		gender: "he"
+	}, {
 		word: "Sagoscat",
 		gender: "he"
 	}, {
@@ -277,4 +284,52 @@ pluralVerbs = [
 	"could be", "couldn't be",
 	"could never be", "could never have been", "could still be",
 	"choose to be", "don't choose to be",
+];
+
+pluralEndings = [
+	"anything you want",
+	"just what you want",
+	"just what you need",
+	"the things you need",
+	"what you need them to be",
+	"what you were thinking",
+	"what we are all thinking",
+	"whatever they want to be",
+	"just what they need to be",
+	"the right thing",
+	"whatever makes you happy",
+	"whatever makes them happy",
+	"what you need",
+	"right where they need to be",
+	"right where they shouldn't be",
+	"what you think they are",
+	"what you dream of",
+	"only the best bits",
+];
+
+singularEndings = [
+	"only the best bits",
+	"what you dream of",
+	"the right thing",
+	"anything you want",
+	"just the thing",
+	"just what you want",
+	"just what you need",
+	"the thing you need",
+	"what makes you happy",
+	"whatever makes you happy",
+	"whatever makes it happy",
+	"whatever you want",
+	"what you were thinking",
+	"what we are all thinking",
+	"what you need",
+	"exactly what you need",
+	"what you need it to be",
+	"exactly what you need it to be",
+	"where you need it to be",
+	"exactly where you need it to be",
+	"what you want it to be",
+	"what you think it is",
+	"exactly what you think it is",
+	"just what it needs to be",
 ];

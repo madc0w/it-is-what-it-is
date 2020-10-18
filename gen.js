@@ -1,10 +1,14 @@
-var prevSubject = null;
-var isRunning = false;
-var intervalId = null;
-var seen;
+let prevSubject = null;
+let isRunning = false;
+let intervalId = null;
+let seen;
 
 function onLoad() {
-	var total = ((pluralNouns.length + pronouns.length) * pluralVerbs.length * pluralVerbs.length) + (singularNouns.length * singularVerbs.length * singularVerbs.length);
+	const total =
+		((pluralNouns.length + pronouns.length) * pluralVerbs.length * pluralVerbs.length) +
+		(singularNouns.length * singularVerbs.length * singularVerbs.length) +
+		((pluralNouns.length + pronouns.length) * pluralVerbs.length * pluralEndings.length) +
+		(singularNouns.length * singularVerbs.length * singularEndings.length);
 	$("#num-permutations").html(total);
 
 	seen = JSON.parse(localStorage.getItem("seen")) || {};
@@ -17,20 +21,19 @@ function go() {
 	$("#text").animate({
 		"font-size": "0px",
 		"width": "0%",
-		"margin-top": "80px",
+		"margin-top": "100px",
 		"opacity": 0,
-	}, 2000, "swing", () => {
-		var isPlural = Math.random() < pluralNouns.length / (pluralNouns.length + singularNouns.length);
-		var gender = null;
-		var subject = null;
-		var isPronoun = false;
-		if (Math.random() < 0.3) {
-			isPronoun = true;
+	}, 2000, () => {
+		let isPlural = Math.random() < pluralNouns.length / (pluralNouns.length + singularNouns.length);
+		let gender = null;
+		let subject = null;
+		const isPronoun = Math.random() < 0.3;
+		if (isPronoun) {
 			subject = getRandomElement(pronouns);
 			isPlural = subject.isPlural;
 			subject = subject.word;
 		} else {
-			var nouns = isPlural ? pluralNouns : singularNouns;
+			const nouns = isPlural ? pluralNouns : singularNouns;
 			do {
 				subject = getRandomElement(nouns);
 				if (typeof subject == "object") {
@@ -40,18 +43,27 @@ function go() {
 			} while (subject == prevSubject);
 		}
 		prevSubject = subject;
-		var text = ucFirst(subject) + " ";
-		var verbs = isPlural ? pluralVerbs : singularVerbs;
+		let text = ucFirst(subject) + " ";
+		const verbs = isPlural ? pluralVerbs : singularVerbs;
 		text += getRandomElement(verbs);
-		text += " what ";
-		if (gender) {
-			text += " " + gender + " ";
-		} else if (isPronoun) {
-			text += " " + subject + " ";
+		if (Math.random() < 0.4) {
+			const endings = isPlural ? pluralEndings : singularEndings;
+			let ending = getRandomElement(endings);
+			if (isPronoun) {
+				ending = ending.replace(/ it /, ' ' + subject + ' ');
+			}
+			text += " " + ending;
 		} else {
-			text += isPlural ? " they " : " it ";
+			text += " what ";
+			if (gender) {
+				text += " " + gender + " ";
+			} else if (isPronoun) {
+				text += " " + subject + " ";
+			} else {
+				text += isPlural ? " they " : " it ";
+			}
+			text += getRandomElement(verbs);
 		}
-		text += getRandomElement(verbs);
 		text += ".";
 
 		seen[text] = true;
@@ -59,13 +71,13 @@ function go() {
 		$("#num-seen").html(Object.keys(seen).length);
 
 		if (speechSynthesis) {
-			var msg = new SpeechSynthesisUtterance(text);
+			let msg = new SpeechSynthesisUtterance(text);
 			setRandomVoice(msg);
 			speechSynthesis.speak(msg);
 		}
 
 		// fail with 403
-		//			var url = "https://translation.googleapis.com/language/translate/v2?key=AIzaSyBMRKQyqJQOCsPSA7eVFu0N0DPwFk_aTH4";
+		//			let url = "https://translation.googleapis.com/language/translate/v2?key=AIzaSyBMRKQyqJQOCsPSA7eVFu0N0DPwFk_aTH4";
 		//			url += "&source=EN";
 		//			url += "&target=FR";
 		//			url += "&q=" + text;
@@ -75,7 +87,7 @@ function go() {
 
 		$("#text").html(text);
 		$("#text").animate({
-			"margin-top": "0px",
+			"margin-top": "20px",
 			"font-size": "120px",
 			"width": "100%",
 			"opacity": 1,
@@ -89,7 +101,7 @@ function ucFirst(word) {
 }
 
 function setRandomVoice(msg) {
-	var voices = [];
+	const voices = [];
 	new SpeechSynthesisUtterance();
 	speechSynthesis.getVoices().forEach(function (voice) {
 		if (voice.lang.startsWith("en") || voice.lang.startsWith("fr") || voice.lang.startsWith("zh") || voice.lang.startsWith("ja")) {
@@ -97,7 +109,7 @@ function setRandomVoice(msg) {
 			voices.push(voice);
 		}
 	});
-	var voice = voices[Math.floor(Math.random() * voices.length)];
+	const voice = voices[Math.floor(Math.random() * voices.length)];
 	msg.pitch = 1 + ((Math.random() - 0.5) * 0.8);
 	msg.voice = voice;
 }
