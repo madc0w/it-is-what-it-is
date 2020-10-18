@@ -49,9 +49,13 @@ pluralNouns = [
 	"communists",
 	"capitalists",
 	"monkeys",
+	"subatomic particles",
 ];
 
 singularNouns = [
+	"monkey poop",
+	"inner peace",
+	"enlightenment",
 	"metaphysical nonsense",
 	"your mind",
 	"your brain",
